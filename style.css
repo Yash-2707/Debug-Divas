@@ -37,7 +37,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px; /* Adjust spacing between nav items */
+    gap: 40px;
     margin-right: 20px;
 }
 
@@ -52,13 +52,11 @@ body {
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Proper hover effect with red text color */
 .nav-links a:hover {
     color: red;
     text-shadow: 0 0 5px red;
 }
 
-/* Remove the shine effect */
 .nav-links a::after {
     content: none;
 }
@@ -115,16 +113,19 @@ body {
 .login:hover {
     background-color: #388e3c;
 }
-.hero{
+
+.hero {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
 }
-.red{
- color: #f56565;
- text-shadow:0 0 3px #f56565;
+
+.red {
+    color: #f56565;
+    text-shadow: 0 0 3px #f56565;
 }
+
 .hero-section {
     display: flex;
     justify-content: space-between;
@@ -135,20 +136,20 @@ body {
 }
 
 .hero-content {
-    max-width: 600px; 
-    margin-right:60px;
+    max-width: 600px;
+    margin-right: 60px;
     margin-top: 100px;
 }
 
 .hero-title {
-    font-size: 3em; /* Adjust the title size */
-    margin-bottom: 20px; /* Space between title and description */
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 .hero-description {
-    font-size: 1.25em; /* Slightly smaller font for description */
-    margin-bottom: 30px; 
-    color: white;/* Space before the button */
+    font-size: 1.25em;
+    margin-bottom: 30px;
+    color: white;
 }
 
 .cta-button {
@@ -162,96 +163,99 @@ body {
 }
 
 .cta-button:hover {
-    background-color: white; /* Change button color on hover */
-    color: #3fcaca; /* Change text color on hover */
+    background-color: white;
+    color: #3fcaca;
 }
 
 .hero-image img {
     margin-top: 80px;
-    max-width: 400px; 
-    height: auto; 
+    max-width: 400px;
+    height: auto;
     border: 2px solid #3fcaca;
     box-shadow: 5px 5px 20px #3fcaca;
 }
+
 .features-section {
     margin-top: 6rem;
     padding: 50px;
     background-color: rgb(26, 20, 20);
     color: #3fcaca;
-    text-align: center; /* Center-align the text */
+    text-align: center;
 }
 
-.features{
-    font-size: 2.5em; /* Adjust the title size */
-    margin-bottom: 40px; /* Space below the title */
+.features {
+    font-size: 2.5em;
+    margin-bottom: 40px;
 }
 
 .features-container {
     margin-top: 100px;
     display: flex;
-    justify-content: space-around; /* Space out the feature boxes */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .feature {
     color: white;
-    background-color: rgb(26, 20, 20); /* Light background for contrast */
-    border: 2px solid #3fcaca; /* Border to match your theme */
-    border-radius: 10px; /* Rounded corners */
+    background-color: rgb(26, 20, 20);
+    border: 2px solid #3fcaca;
+    border-radius: 10px;
     padding: 20px;
-    max-width: 300px; /* Limit width of each feature box */
-    margin: 20px; /* Space between feature boxes */
-    transition: transform 0.3s ease; 
-    box-shadow: 2px 2px 8px #3fcaca;/* Smooth hover effect */
+    max-width: 300px;
+    margin: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 8px #3fcaca;
 }
 
 .feature:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05);
 }
 
 .feature h3 {
-    font-size: 1.5em; /* Title size for each feature */
-    margin-bottom: 15px; /* Space below the title */
+    font-size: 1.5em;
+    margin-bottom: 15px;
 }
 
 .feature p {
-    font-size: 1em; /* Description size */
+    font-size: 1em;
 }
+
 .faculty-card {
-    background-color: rgba(63, 202, 202, 0.1); /* Light background */
-    border: 2px solid #f56565; /* Border color */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Inner spacing */
-    max-width: 300px; /* Limit width */
-    text-align: center; /* Center-align text */
-    margin: 20px; /* Space around the card */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    background-color: rgba(63, 202, 202, 0.1);
+    border: 2px solid #f56565;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease;
 }
 
 .faculty-card:hover {
-    box-shadow: 0 5px 10px #f56565; /* Slightly enlarge on hover */
+    box-shadow: 0 5px 10px #f56565;
 }
 
 .faculty-image {
-    width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Match card's corners */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .faculty-name {
-    font-size: 1.5em; /* Name size */
-    margin: 15px 0; /* Space around the name */
-    color: #3fcaca; /* Name color */
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #3fcaca;
 }
 
 .faculty-phone,
 .faculty-email,
 .faculty-qualification {
-    font-size: 1em; /* Description size */
-    margin: 5px 0; /* Space around each detail */
-    color: white; /* Text color */
+    font-size: 1em;
+    margin: 5px 0;
+    color: white;
 }
-.booking-button{
+
+.booking-button {
     padding: 10px 20px;
     border-radius: 10px;
     background-color: #3fcaca;
@@ -259,25 +263,28 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
+
 .booking-button:hover {
-    background-color: white; /* Change button color on hover */
-    color: #3fcaca; /* Change text color on hover */
-}.faculty {
+    background-color: white;
+    color: #3fcaca;
+}
+
+.faculty {
     width: 100%;
     padding: 20px 0;
 }
 
 .faculty-container {
     display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next row if needed */
-    justify-content: flex-start; /* Align cards to the start */
-    gap: 20px; /* Space between cards */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .faculty-card {
-    flex: 1 1 300px; /* Allow cards to be flexible but maintain a consistent width */
+    flex: 1 1 300px;
     max-width: 300px;
     background-color: rgba(63, 202, 202, 0.1);
     border: 2px solid #f56565;
@@ -287,12 +294,12 @@ body {
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    word-wrap: break-word; /* Ensure long words break and wrap */
-    overflow: hidden; /* Prevent overflow */
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 .faculty-card img {
-    width: 100%; /* Make sure image fits the card width */
+    width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -303,13 +310,12 @@ body {
     margin: 5px 0;
 }
 
-
 .faculty-details {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 5px; /* Add spacing between details */
+    gap: 5px;
     margin-top: 10px;
 }
 
@@ -326,7 +332,7 @@ body {
     margin: 3px 0;
     color: white;
     display: block;
-    word-break: break-word; /* Break long texts properly */
+    word-break: break-word;
 }
 
 .booking-button {
@@ -339,7 +345,7 @@ body {
     font-weight: bold;
     font-size: 0.9em;
     transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: center; /* Center align button text */
+    text-align: center;
 }
 
 .booking-button:hover {
@@ -347,28 +353,12 @@ body {
     color: #3fcaca;
 }
 
-/* Ensure only 3 cards are visible on larger screens */
 @media (min-width: 768px) {
     .faculty-card:nth-child(n+4) {
         display: none;
     }
 }
 
-/* Responsive adjustments */
-@media (max-width: 767px) {
-    .faculty-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .faculty-card {
-        width: 100%;
-        max-width: 100%; /* Allow full width on mobile */
-        margin-bottom: 20px;
-    }
-}
-
-/* Sliding out animation */
 @keyframes slide-out {
     from {
         transform: translateX(0);
@@ -378,7 +368,6 @@ body {
     }
 }
 
-/* Sliding in animation */
 @keyframes slide-in {
     from {
         transform: translateX(100%);
@@ -444,92 +433,164 @@ body {
 i.fa-plus {
     transition: transform 0.3s;
 }
+
 .footer {
     border-top: 2px solid #3fcaca;
     box-shadow: 0 0 10px #3fcaca;
-    background-color: rgb(26, 20, 20); /* Dark background color */
-    color: white; /* White text color */
-    padding: 2rem 0; /* Top and bottom padding */
+    background-color: rgb(26, 20, 20);
+    color: white;
+    padding: 2rem 0;
 }
 
 .footer_container {
-    display: flex; /* Flexbox layout for footer sections */
-    justify-content: space-between; /* Space between footer sections */
-    max-width: 1200px; /* Max width for the footer */
-    margin: 0 auto; /* Center the footer container */
-    padding: 0 1rem; /* Side padding */
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .footer_1, .footer_3, .footer_4 {
-    flex: 1; /* Each section takes equal space */
-    margin: 0 1rem; /* Margin between sections */
+    flex: 1;
+    margin: 0 1rem;
 }
 
 .footer_logo h4 {
-    font-size: 1.5rem; /* Logo font size */
-    color: #3fcaca; /* Logo color */
-    /* Margin below logo */
+    font-size: 1.5rem;
+    color: #3fcaca;
 }
 
 .footer_1 p {
-    font-size: 0.9rem; /* Font size for the description */
-    line-height: 1.5; /* Line height for better readability */
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .footer h4 {
-    font-size: 1.2rem; /* Heading font size */
-    margin-bottom: 1rem; /* Margin below headings */
-    color: #f56565; /* Heading color */
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #f56565;
 }
 
 .privacy {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
+    list-style: none;
+    padding: 0;
 }
 
 .privacy li {
-    margin-bottom: 0.5rem; /* Space between list items */
+    margin-bottom: 0.5rem;
 }
 
 .privacy a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .privacy a:hover {
-    color: #3fcaca; /* Change color on hover */
+    color: #3fcaca;
 }
 
 .footer_socials {
-    list-style: none; /* Remove bullet points */
-    display: flex; /* Flex layout for social icons */
-    padding: 0; /* Remove default padding */
+    list-style: none;
+    display: flex;
+    padding: 0;
 }
 
 .footer_socials li {
-    margin-right: 1rem; /* Space between social icons */
+    margin-right: 1rem;
 }
 
 .footer_socials a {
-    color: white; /* Icon color */
-    font-size: 1.5rem; /* Icon size */
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 .footer_socials a:hover {
-    color: #3fcaca; /* Change color on hover */
+    color: #3fcaca;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Tablet Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .nav-links {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .cta-buttons {
+        margin-right: 0;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-image img {
+        margin-top: 0;
+    }
+
+    .features-container {
+        justify-content: center;
+    }
+
+    .feature {
+        flex-basis: calc(50% - 40px);
+    }
+
+    .faculty-container {
+        justify-content: center;
+    }
+
+    .faculty-card {
+        flex-basis: calc(50% - 40px);
+    }
+
     .footer_container {
-        flex-direction: column; /* Stack sections on smaller screens */
-        align-items: center; /* Center align sections */
+        flex-wrap: wrap;
     }
 
     .footer_1, .footer_3, .footer_4 {
-        margin: 1rem 0; /* Margin above and below sections */
-        text-align: center; /* Center align text */
+        flex-basis: calc(50% - 2rem);
+        margin-bottom: 2rem;
+    }
+}
+
+/* Additional adjustments for smaller tablets */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        flex-basis: 100%;
+    }
+
+    .faculty-card {
+        flex-basis: 100%;
+    }
+
+    .footer_1, .footer_3, .footer_4 {
+        flex-basis: 100%;
     }
 }
