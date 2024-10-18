@@ -219,7 +219,7 @@ body {
 }
 .faculty-card {
     background-color: rgba(63, 202, 202, 0.1); /* Light background */
-    border: 2px solid #3fcaca; /* Border color */
+    border: 2px solid #f56565; /* Border color */
     border-radius: 10px; /* Rounded corners */
     padding: 20px; /* Inner spacing */
     max-width: 300px; /* Limit width */
@@ -229,7 +229,7 @@ body {
 }
 
 .faculty-card:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 5px 10px #f56565; /* Slightly enlarge on hover */
 }
 
 .faculty-image {
@@ -258,4 +258,278 @@ body {
     color: black;
     text-decoration: none;
     font-weight: bold;
+}
+.booking-button:hover {
+    background-color: white; /* Change button color on hover */
+    color: #3fcaca; /* Change text color on hover */
+}.faculty {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.faculty-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row if needed */
+    justify-content: flex-start; /* Align cards to the start */
+    gap: 20px; /* Space between cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faculty-card {
+    flex: 1 1 300px; /* Allow cards to be flexible but maintain a consistent width */
+    max-width: 300px;
+    background-color: rgba(63, 202, 202, 0.1);
+    border: 2px solid #f56565;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word; /* Ensure long words break and wrap */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.faculty-card img {
+    width: 100%; /* Make sure image fits the card width */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.faculty-card h3,
+.faculty-card p,
+.faculty-card button {
+    margin: 5px 0;
+}
+
+
+.faculty-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px; /* Add spacing between details */
+    margin-top: 10px;
+}
+
+.faculty-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #3fcaca;
+}
+
+.faculty-phone,
+.faculty-email,
+.faculty-qualification {
+    font-size: 0.9em;
+    margin: 3px 0;
+    color: white;
+    display: block;
+    word-break: break-word; /* Break long texts properly */
+}
+
+.booking-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #3fcaca;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center; /* Center align button text */
+}
+
+.booking-button:hover {
+    background-color: white;
+    color: #3fcaca;
+}
+
+/* Ensure only 3 cards are visible on larger screens */
+@media (min-width: 768px) {
+    .faculty-card:nth-child(n+4) {
+        display: none;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .faculty-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faculty-card {
+        width: 100%;
+        max-width: 100%; /* Allow full width on mobile */
+        margin-bottom: 20px;
+    }
+}
+
+/* Sliding out animation */
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Sliding in animation */
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slide-in 0.8s ease-in-out forwards;
+}
+
+/* Basic styling for FAQ section */
+.faqs {
+    padding: 20px;
+    background-color: rgb(26, 20, 20);
+    color: #3fcaca;
+}
+
+.faqs h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.faqs_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.faqs_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-heading {
+    margin: 0;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    color: white;
+}
+
+.faq.active .faq-answer {
+    display: block;
+}
+
+.faq.active i {
+    transform: rotate(45deg);
+}
+
+i.fa-plus {
+    transition: transform 0.3s;
+}
+.footer {
+    border-top: 2px solid #3fcaca;
+    box-shadow: 0 0 10px #3fcaca;
+    background-color: rgb(26, 20, 20); /* Dark background color */
+    color: white; /* White text color */
+    padding: 2rem 0; /* Top and bottom padding */
+}
+
+.footer_container {
+    display: flex; /* Flexbox layout for footer sections */
+    justify-content: space-between; /* Space between footer sections */
+    max-width: 1200px; /* Max width for the footer */
+    margin: 0 auto; /* Center the footer container */
+    padding: 0 1rem; /* Side padding */
+}
+
+.footer_1, .footer_3, .footer_4 {
+    flex: 1; /* Each section takes equal space */
+    margin: 0 1rem; /* Margin between sections */
+}
+
+.footer_logo h4 {
+    font-size: 1.5rem; /* Logo font size */
+    color: #3fcaca; /* Logo color */
+    /* Margin below logo */
+}
+
+.footer_1 p {
+    font-size: 0.9rem; /* Font size for the description */
+    line-height: 1.5; /* Line height for better readability */
+}
+
+.footer h4 {
+    font-size: 1.2rem; /* Heading font size */
+    margin-bottom: 1rem; /* Margin below headings */
+    color: #f56565; /* Heading color */
+}
+
+.privacy {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.privacy li {
+    margin-bottom: 0.5rem; /* Space between list items */
+}
+
+.privacy a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.privacy a:hover {
+    color: #3fcaca; /* Change color on hover */
+}
+
+.footer_socials {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flex layout for social icons */
+    padding: 0; /* Remove default padding */
+}
+
+.footer_socials li {
+    margin-right: 1rem; /* Space between social icons */
+}
+
+.footer_socials a {
+    color: white; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer_socials a:hover {
+    color: #3fcaca; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer_container {
+        flex-direction: column; /* Stack sections on smaller screens */
+        align-items: center; /* Center align sections */
+    }
+
+    .footer_1, .footer_3, .footer_4 {
+        margin: 1rem 0; /* Margin above and below sections */
+        text-align: center; /* Center align text */
+    }
 }
