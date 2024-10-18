@@ -1,0 +1,261 @@
+/* Reset default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(26, 20, 20);
+    color: #3fcaca;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(26, 20, 20);
+    border-bottom: 2px solid #3fcaca;
+    box-shadow: 0 0 10px #3fcaca;
+    position: relative;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #3fcaca;
+    margin-left: 20px;
+    animation: glow 1.5s infinite alternate;
+}
+
+.logo .highlight {
+    color: red;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Adjust spacing between nav items */
+    margin-right: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Proper hover effect with red text color */
+.nav-links a:hover {
+    color: red;
+    text-shadow: 0 0 5px red;
+}
+
+/* Remove the shine effect */
+.nav-links a::after {
+    content: none;
+}
+
+/* Call-to-action button styling */
+.cta-buttons {
+    margin-right: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.cta-button {
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 2px solid #3fcaca;
+    box-shadow: 0 0 10px #3fcaca;
+}
+
+/* Glowing effect on #3fcaca elements */
+.glow {
+    color: #3fcaca;
+    text-shadow: 0 0 8px #3fcaca;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #3fcaca, 0 0 10px #3fcaca, 0 0 15px #3fcaca;
+    }
+    100% {
+        text-shadow: 0 0 10px #3fcaca, 0 0 20px #3fcaca, 0 0 30px #3fcaca;
+    }
+}
+
+/* SignIn button style */
+.signin {
+    background-color: #4285f4;
+    color: black;
+}
+
+.signin:hover {
+    background-color: #357ae8;
+}
+
+/* Login button style */
+.login {
+    background-color: #4caf50;
+    color: black;
+}
+
+.login:hover {
+    background-color: #388e3c;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.red{
+ color: #f56565;
+ text-shadow:0 0 3px #f56565;
+}
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: rgb(26, 20, 20);
+    color: #3fcaca;
+}
+
+.hero-content {
+    max-width: 600px; 
+    margin-right:60px;
+    margin-top: 100px;
+}
+
+.hero-title {
+    font-size: 3em; /* Adjust the title size */
+    margin-bottom: 20px; /* Space between title and description */
+}
+
+.hero-description {
+    font-size: 1.25em; /* Slightly smaller font for description */
+    margin-bottom: 30px; 
+    color: white;/* Space before the button */
+}
+
+.cta-button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #3fcaca;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: white; /* Change button color on hover */
+    color: #3fcaca; /* Change text color on hover */
+}
+
+.hero-image img {
+    margin-top: 80px;
+    max-width: 400px; 
+    height: auto; 
+    border: 2px solid #3fcaca;
+    box-shadow: 5px 5px 20px #3fcaca;
+}
+.features-section {
+    margin-top: 6rem;
+    padding: 50px;
+    background-color: rgb(26, 20, 20);
+    color: #3fcaca;
+    text-align: center; /* Center-align the text */
+}
+
+.features{
+    font-size: 2.5em; /* Adjust the title size */
+    margin-bottom: 40px; /* Space below the title */
+}
+
+.features-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around; /* Space out the feature boxes */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.feature {
+    color: white;
+    background-color: rgb(26, 20, 20); /* Light background for contrast */
+    border: 2px solid #3fcaca; /* Border to match your theme */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    max-width: 300px; /* Limit width of each feature box */
+    margin: 20px; /* Space between feature boxes */
+    transition: transform 0.3s ease; 
+    box-shadow: 2px 2px 8px #3fcaca;/* Smooth hover effect */
+}
+
+.feature:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.feature h3 {
+    font-size: 1.5em; /* Title size for each feature */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+.feature p {
+    font-size: 1em; /* Description size */
+}
+.faculty-card {
+    background-color: rgba(63, 202, 202, 0.1); /* Light background */
+    border: 2px solid #3fcaca; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    max-width: 300px; /* Limit width */
+    text-align: center; /* Center-align text */
+    margin: 20px; /* Space around the card */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.faculty-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.faculty-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match card's corners */
+}
+
+.faculty-name {
+    font-size: 1.5em; /* Name size */
+    margin: 15px 0; /* Space around the name */
+    color: #3fcaca; /* Name color */
+}
+
+.faculty-phone,
+.faculty-email,
+.faculty-qualification {
+    font-size: 1em; /* Description size */
+    margin: 5px 0; /* Space around each detail */
+    color: white; /* Text color */
+}
+.booking-button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #3fcaca;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
