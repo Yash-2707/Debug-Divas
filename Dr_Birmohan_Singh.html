@@ -38,10 +38,14 @@
                 offline
             </p>
         </div>
-        <div 
-            id="chat_box"
-            style="width:100%; height:73%; overflow-y: scroll; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 3%; gap: 3%"
+        <div
+            style="overflow-y: scroll; height: 78.5%;"
         >
+            <div 
+                id="chat_box"
+                style="width:100%; height: auto; min-height: 100%; overflow-y: scroll; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 3%; gap: 3%;"
+            >
+            </div>
         </div>
         <div
             id="input_container"
@@ -101,6 +105,7 @@
             container.style.bottom = "10%";
             container.style.alignSelf = "flex-start";
             container.style.marginLeft = "2.5%";
+            container.style.marginBottom = "1%";
 
             let chat_box = document.getElementById("chat_box");
             chat_box.appendChild(container);
@@ -148,6 +153,7 @@
                 container.style.paddingRight = "10px";
                 container.style.alignSelf = "flex-end";
                 container.style.marginRight = "2.5%";
+                container.style.marginBottom = "1%";
 
                 let chat_box = document.getElementById("chat_box");
                 chat_box.appendChild(container);

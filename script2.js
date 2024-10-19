@@ -61,11 +61,13 @@ function sendMessageThroughMessageChannel(message=null) {
     container.style.paddingRight = "10px";
     container.style.alignSelf = "flex-start";
     container.style.marginLeft = "2.5%";
+    container.style.marginBottom = "2%";
 
     let chat_box = document.getElementById("chat_box");
     chat_box.appendChild(container);
     
-    chat_box.scrollTop = chat_box.scrollHeight;
+    let chat_box_outer_container = document.getElementById('chat_box_outer_container');
+    chat_box_outer_container.scrollTop = chat_box.scrollHeight;
 }
 
 function sendMessage_live_channel(message) {
@@ -103,11 +105,13 @@ channel.onmessage = function(event) {
         container.style.paddingRight = "10px";
         container.style.alignSelf = "flex-end";
         container.style.marginRight = "2.5%";
+        container.style.marginBottom = "2%";
 
         let chat_box = document.getElementById("chat_box");
         chat_box.appendChild(container);
         
-        chat_box.scrollTop = chat_box.scrollHeight;
+        let chat_box_outer_container = document.getElementById('chat_box_outer_container');
+        chat_box_outer_container.scrollTop = chat_box_outer_container.scrollHeight;
     }
 };
 
