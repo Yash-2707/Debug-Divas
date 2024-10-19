@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>STUDENT</title>
+    <script src="https://kit.fontawesome.com/57a4d68e86.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div
+        style="display:inline-block; width: 100%;"
+    >
+        <div>
+            <div class="navbar">
+                <div class="logo">SLIET</div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/material">About Us</a></li>
+                    <li><a href="/community">Contact</a></li>
+                    <li><a href="/roadmaps">Mentorship</a></li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="/signin" class="cta-button signin">SignIn</a>
+                    <a href="/login" class="cta-button login">Login</a>
+                </div>
+            </div>
+            <header class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Empower Your Future with <span class="red">Mentorship</span></h1>
+                    <p class="hero-description">
+                        Connect with experienced mentors who can guide you through your academic and career journey.
+                    </p>
+                    <a href="#get-started" class="cta-button">Get Started</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://modernmoney.ca/wp-content/uploads/2021/01/shutterstock_556392739-scaled.jpg" alt="Mentorship" />
+                </div>
+            </header>
+            <section class="features-section">
+                <h2 class="features red">Key Features</h2>
+                <div class="features-container">
+                    <div class="feature">
+                        <h3 class="red">Automated Booking</h3>
+                        <p>Effortlessly book sessions with mentors based on their availability.</p>
+                    </div>
+                    <div class="feature">
+                        <h3 class="red">Expert Mentors</h3>
+                        <p>Connect with experienced faculty members who guide you in your academic and career journey.</p>
+                    </div>
+                    <div class="feature">
+                        <h3 class="red">Simple Communication</h3>
+                        <p>Enjoy seamless communication through notifications and chat features.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="faculty">
+                <div class="faculty-container">
+                    <div class="faculty-card">
+                        <img src="Photos/birmohansingh.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. Birmohan Singh</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> +91-1672-253208</p>
+                        <p class="faculty-email"><span class="red">Email:</span> birmohansingh@sliet.ac.in , birmohans@gmail.com</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> Ph.D., M.E.</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5 
+                                id="Dr_Birmohan_Singh"
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/DamanpreetSingh.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. Damanpreet Singh</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> +91-1672-253210
+                        </p>
+                        <p class="faculty-email"><span class="red">Email:</span> damanpreets@sliet.ac.in
+                        </p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> Ph.D., M.Tech, B.Tech.</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/MajorSingh.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. Major Singh Goraya</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> 01672-253212</p>
+                        <p class="faculty-email"><span class="red">Email:</span> mjrsingh@yahoo.com</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> Ph.D., M.Tech., B.Tech.</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/ManojSachan.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. Manoj Sachan</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> 91-1672-253214</p>
+                        <p class="faculty-email"><span class="red">Email:</span> manojsachan@sliet.ac.in, manojsachan@gmail.com</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span>B.Tech(Computer Science) , M.E(Computer Science), Ph.D (Computer Science & Engineering)</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/GurjinderKaur.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. Gurjinder Kaur</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> +91-1672-253326
+                        </p>
+                        <p class="faculty-email"><span class="red">Email:</span> gurjinder13@yahoo.com
+                        </p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> B.E. Kyrgyz Technical University, Bishkek M.S. BITS, Pilani Ph.D SLIET, Longowal</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/AmarNath.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. Amar Nath</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> 01672-253610</p>
+                        <p class="faculty-email"><span class="red">Email:</span> amarnath@sliet.ac.in</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> Ph.D. in CSE from IIT Roorkee, Sept. 2020. Thesis 'A Distributed Approach for Collaborative Task Execution in Dynamic Environment'   M. Tech. in CSE from NIT Rourkela, June 2014.   B. Tech. in CSE from  BIET Jhansi,  June 2006</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/JagdeepSingh.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. Jagdeep Singh</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> 01672-253320</p>
+                        <p class="faculty-email"><span class="red">Email:</span> jagdeep@sliet.ac.in; jagdeepknit@gmail.com</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> Ph.D.  entitled "Proficient Route Selection Strategies for Effective Routing in Delay-Tolerant Opportunistic Networks" from the University of Delhi, New Delhi,   M. Tech, Computer Science & Engineering,   B. Tech, Computer Science & Engineering</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/ManminderSingh.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. Manminder Singh</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> +91-01672-253328
+                        </p>
+                        <p class="faculty-email"><span class="red">Email:</span> manminderldh@gmail.com, manmindersingh@sliet.ac.in
+                        </p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> B.Tech (Computer Science & Engineering) M.Tech (Computer Science & Engineering) Ph. D (Computer Science & Engineering)</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/PreetpalKaur.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. Preetpal Kaur Buttar</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> 01672-253614</p>
+                        <p class="faculty-email"><span class="red">Email:</span> preetpal@sliet.ac.in</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> PhD (Computer Science & Engineering)</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/TajinderSingh.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. Tajinder Singh
+                        </h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> +91-6283963279
+                        </p>
+                        <p class="faculty-email"><span class="red">Email:</span> tajindersingh@sliet.ac.in</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> Ph.D entitled “Machine Learning Based Text Mining in Social Media” from National Institute of Technology, Hamirpur, India.</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/Utkarsh.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">
+                            Dr. Utkarsh</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> -</p>
+                        <p class="faculty-email"><span class="red">Email:</span> -</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> Doctor of Philosophy School of Computer & Systems Sciences Jawaharlal Nehru University, New Delhi, India   Master of Technology (Computer Science and Technology) School of Computer & Systems Sciences Jawaharlal Nehru University, New Delhi, India   Bachelor of Technology (Information Technology) University Institute of Engineering & Technology CSJM University, Kanpur, India</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                                </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/VinodKumar.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Dr. VINOD KUMAR VERMA</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> +91-1672-253218</p>
+                        <p class="faculty-email"><span class="red">Email:</span> vinod5881@gmail.com</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> Ph.D. Computer Science and Engineering</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/JaspalSingh.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Jaspal Singh</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> 01672-253327
+                        </p>
+                        <p class="faculty-email"><span class="red">Email:</span> safrisoft@yahoo.com, jaspalsingh@sliet.ac.in</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> M.E. ( CSE & IT), Pursuing  PhD. in Cloud Computing</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div>        
+                    <div class="faculty-card">
+                        <img src="Photos/RahulGautm.jpg" alt="Faculty Name" class="faculty-image">
+                        <h3 class="faculty-name">Rahul Gautam</h3>
+                        <p class="faculty-phone"><span class="red">Phone:</span> +91-1672-25 3612</p>
+                        <p class="faculty-email"><span class="red">Email:</span> rahulgautam@sliet.ac.in</p>
+                        <p class="faculty-qualification"><span class="red">Qualification:</span> Ph.D. pursuing, M.Tech (Computer Science and Applications) from Thapar University, Patiala., B.Tech(Computer Science and Info. Technology) from Sir Chhotu Ram Inst. of Engg. & Technology, CCS University Campus, Meerut.</p>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30%;"
+                        >
+                            <button class="booking-button" onclick="openChat(this)">Ask a Doubt</button>
+                            <h5
+                                style="color: white; font: 15px Arial; width: 30%; text-align: left;"
+                            >
+                                offline
+                            </h5>
+                        </div>
+                    </div> 
+                </div>       
+            </section>
+            <section class="faqs">
+                <h2 class="red faquestion">FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="container faqs_container">
+                    <article class="faq">
+                        <div class="faqs_icon">
+                            <div class="que_ans">
+                                <h4 class="faq-heading">How do I know the right course for me?</h4>
+                                <p class="faq-answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus neque soluta eligendi
+                                    provident similique pariatur quasi fugiat! Quisquam corporis voluptas aliquid? Quae minus
+                                    animi eveniet fuga excepturi deleniti commodi quibusdam!</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </article>
+                    <article class="faq">
+                        <div class="faqs_icon">
+                            <div class="que_ans">
+                                <h4>How do I know the right course for me?</h4>
+                                <p class="faq-answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus neque soluta eligendi
+                                    provident similique pariatur quasi fugiat! Quisquam corporis voluptas aliquid? Quae minus
+                                    animi eveniet fuga excepturi deleniti commodi quibusdam!</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </article>
+                    <article class="faq">
+                        <div class="faqs_icon">
+                            <div class="que_ans">
+                                <h4>How do I know the right course for me?</h4>
+                                <p class="faq-answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus neque soluta eligendi
+                                    provident similique pariatur quasi fugiat! Quisquam corporis voluptas aliquid? Quae minus
+                                    animi eveniet fuga excepturi deleniti commodi quibusdam!</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </article>
+                    <article class="faq">
+                        <div class="faqs_icon">
+                            <div class="que_ans">
+                                <h4>How do I know the right course for me?</h4>
+                                <p class="faq-answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus neque soluta eligendi
+                                    provident similique pariatur quasi fugiat! Quisquam corporis voluptas aliquid? Quae minus
+                                    animi eveniet fuga excepturi deleniti commodi quibusdam!</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="container footer_container">
+                    <div class="footer_1">
+                        <a href="index.html" class="footer_logo"><h4>SLIET</h4></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, tempora?</p>
+                    </div>
+                    <div class="footer_3">
+                        <h4>Primary</h4>
+                        <ul class="privacy">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_4">
+                        <h4>Contact us</h4>
+                        <div>
+                            <p>+91XXXXXXXXXX</p>
+                            <p>DebugDivas@gmail.com</p>
+                            <ul class="footer_socials">
+                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div
+            id="chat_box_outer_container"
+            style="position: sticky; bottom: 2%; display: none;"
+        >
+            <div 
+                id="chat_box_container"
+                style="width:28%; height:70vh; box-shadow: 0px 0px 5px white; bottom: 2%; margin-left: 71%; position: absolute;"
+            >
+                <div 
+                    id="profile_box"
+                    style="width:100%; height:17%; background-color: #3fcaca; box-shadow: 0px 0px 5px gray; display: flex; justify-content: center; align-items: center; flex-direction: row; gap: 0%;"
+                >
+                    <div
+                        id="name-and-profile"
+                        style="height: 100%; width: 68%; display: flex; justify-content: center; align-items: center; flex-direction: row;  gap: 3%;"
+                    >
+                        <div
+                            id="profile"
+                            style="height: 8.5vh; width: 8.5vh; border-radius: 50%; border: 1px solid white; overflow: hidden;"
+                        >
+                            <img id="profile-image" src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" height="100%" width="100%">
+                        </div>
+                        <p 
+                            id="profile-name"
+                            style="color: white; font-size: 20px; font-family: Arial, sans-serif; width: 70%; word-wrap: break-word; font-weight: 600;"
+                        >
+                        </p>
+                    </div>
+                    <p
+                        id="live"
+                        style="font: 15px Arial; color: white; width: 20%; display: flex; justify-content: center; align-items: center;"
+                    >
+                        offline
+                    </p>
+                    <button 
+                        onclick="closeChatBox()"
+                        style="width:5%; cursor: pointer; background: none; border: none; display: flex; justify-content: center; align-items: center; font: 15px Arial; color: white;"
+                    >
+                        X
+                    </button>
+                </div>
+                <div
+                    id="chat_box_outer_container"
+                    style="overflow-y: scroll; height: 76%;"
+                >
+                    <div 
+                        id="chat_box"
+                        style="width:100%; height: auto; min-height: 100%; overflow-y: scroll; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 3%; gap: 3%;"
+                    >
+                    </div>
+                </div>
+                <div
+                    id="input_container"
+                    style="width:100%; height:10%; display: flex; justify-content: center; align-items: center; flex-direction: row; box-shadow: 0px 0px 5px gray"
+                >
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="Enter your message"
+                        style="width:82%; height:100%; font-size: 20px; padding-left: 3%; border: 0px;"
+                    >
+                    <button 
+                        onclick="sendMessageThroughMessageChannel()"
+                        style="width:15%; height:105%; border: 1px solid gainsboro; display: flex; justify-content: center; align-items: center; color: #3fcaca; cursor: pointer;"
+                    >
+                        <span style='font-size:50px;'>&#9654;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="script2.js"></script>
+</html>
