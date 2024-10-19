@@ -39,6 +39,7 @@
             </p>
         </div>
         <div
+            id="chat_box_outer_container"
             style="overflow-y: scroll; height: 78.5%;"
         >
             <div 
@@ -110,7 +111,8 @@
             let chat_box = document.getElementById("chat_box");
             chat_box.appendChild(container);
             
-            chat_box.scrollTop = chat_box.scrollHeight;
+            let chat_box_outer_container = document.getElementById('chat_box_outer_container');
+            chat_box_outer_container.scrollTop = chat_box_outer_container.scrollHeight;
 
             const fullMessage = {
                 text: message,
@@ -158,7 +160,8 @@
                 let chat_box = document.getElementById("chat_box");
                 chat_box.appendChild(container);
                 
-                chat_box.scrollTop = chat_box.scrollHeight;
+                let chat_box_outer_container = document.getElementById('chat_box_outer_container');
+                chat_box_outer_container.scrollTop = chat_box_outer_container.scrollHeight;
             }
         };
 
@@ -181,63 +184,5 @@
         });
 
     </script>
-
-    <!-- <script>
-        const channel = new BroadcastChannel('message_channel');
-        const live = new BroadcastChannel('live_channel');
-
-        function sendMessageThroughMessageChannel(message=null) {
-            if (message == null) {
-                message = document.getElementById('messageInput').value;
-                const fullMessage = {
-                    text: message,
-                    url: window.location.href // Include the sender URL in the message
-                };
-                channel.postMessage(fullMessage);
-            } else {
-                const fullMessage = {
-                    text: message,
-                    url: window.location.href // Include the sender URL in the message
-                };
-                channel.postMessage(fullMessage);
-            }
-        }
-
-        function sendMessageThroughLiveChannel(message) {
-            const fullMessage = {
-                text: message,
-                url: window.location.href // Include the sender URL in the message
-            };
-            live.postMessage(fullMessage);
-        }
-
-        channel.onmessage = function(event) {
-            const messageData = event.data;
-            if (messageData.url.endsWith("student.html")){
-                document.getElementById('receivedMessage').textContent = messageData.text;
-            }
-        };
-
-        live.onmessage = function(event) {
-            const messageData = event.data;
-            if (messageData.url.endsWith("student.html")){
-                if (document.getElementById('live').textContent != messageData.text) {
-                    console.log(messageData);
-                    document.getElementById('live').textContent = messageData.text;
-                    sendMessageThroughLiveChannel(message="online")
-                }
-            }
-        };
-
-        window.addEventListener('load', function () {
-            sendMessageThroughLiveChannel(message="online")
-        });
-        // sendMessageThroughLiveChannel("online")
-
-        window.addEventListener('beforeunload', function () {
-            sendMessageThroughLiveChannel(message="offline")
-        });
-
-    </script> -->
 </body>
 </html>
