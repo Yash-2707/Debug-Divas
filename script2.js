@@ -9,6 +9,7 @@ function openChat(button) {
     var container = button.closest('.faculty-card');
     var img = container.querySelector('img');
     var h3 = container.querySelector('h3');
+    var span = container.querySelector('h5');
     var imgUrl = img.src;
     document.getElementById("profile-image").src = imgUrl;
     document.getElementById("chat_box_outer_container").style.display = "block";
@@ -16,6 +17,8 @@ function openChat(button) {
 
     var chat_box = document.getElementById("chat_box");
     chat_box.innerHTML = '';
+
+    document.getElementById('live').textContent = span.textContent;
 }
 
 function getTextWidth(text, font = '20px Arial') {
@@ -75,7 +78,7 @@ function sendMessage_live_channel(message) {
 
 channel.onmessage = function(event) {
     const messageData = event.data;
-    if (messageData.url.endsWith("mentor.html")){
+    if (messageData.url.endsWith("Dr_Birmohan_Singh.html")){
         const chatBox = document.getElementById('chat_box');
 
         let pElement = document.createElement("p");
@@ -110,9 +113,10 @@ channel.onmessage = function(event) {
 
 live.onmessage = function(event) {
     const messageData = event.data;
-    if (messageData.url.endsWith("mentor.html")){
+    if (messageData.url.endsWith("Dr_Birmohan_Singh.html")){
         if (document.getElementById('Dr_Birmohan_Singh').textContent != messageData.text) {
             document.getElementById('Dr_Birmohan_Singh').textContent = messageData.text;
+            document.getElementById('livee').textContent = messageData.text;
             sendMessage_live_channel(message="online")
         }
     }
