@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor</title>
+</head>
+<body>
+    <div 
+        id="chat_box_container"
+        style="width:100%; height:100%; box-shadow: 0px 0px 5px white; position: fixed; left: 0;"
+    >
+        <div 
+            id="profile_box"
+            style="width:100%; height:10%; background-color: #3fcaca; box-shadow: 0px 0px 5px gray; display: flex; justify-content: center; align-items: center; flex-direction: row; gap: 50%;"
+        >
+            <div
+                id="name-and-profile"
+                style="height: 100%; width: 68%; display: flex; justify-content: center; align-items: center; flex-direction: row;  gap: 3%;"
+            >
+                <div
+                    id="profile"
+                    style="height: 8.5vh; width: 8.5vh; border-radius: 50%; border: 1px solid white; overflow: hidden;"
+                >
+                    <img id="profile-image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" height="100%" width="100%">
+                </div>
+                <p 
+                    id="profile-name"
+                    style="color: white; font-size: 20px; font-family: Arial, sans-serif; width: 70%; word-wrap: break-word; font-weight: 600;"
+                >
+                  Student
+                </p>
+            </div>
+            <p
+                id="live"
+                style="font: 25px Arial; color: white; width: 20%; display: flex; justify-content: center; align-items: center;"
+            >
+                offline
+            </p>
+        </div>
+        <div 
+            id="chat_box"
+            style="width:100%; height:73%; overflow-y: scroll; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 3%; gap: 3%"
+        >
+        </div>
+        <div
+            id="input_container"
+            style="width:100%; height:10%; display: flex; justify-content: center; align-items: center; flex-direction: row; box-shadow: 0px 0px 5px gray"
+        >
+            <input 
+                type="text" 
+                id="messageInput" 
+                placeholder="Enter your message"
+                style="width:90%; height:100%; font-size: 20px; padding-left: 3%; border: 0px;"
+            >
+            <button 
+                onclick="sendMessageThroughMessageChannel()"
+                style="width:7%; height:105%; border: 1px solid gainsboro; display: flex; justify-content: center; align-items: center; color: #3fcaca; cursor: pointer;"
+            >
+                <span style='font-size:60px;'>&#9654;</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const channel = new BroadcastChannel('message_channel');
+        const live = new BroadcastChannel('live_channel');
+
+        function getTextWidth(text, font = '20px Arial') {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            context.font = font;
+            return context.measureText(text).width;
+        }
+
+        function sendMessageThroughMessageChannel(message=null) {
+            message = document.getElementById('messageInput').value;
+            document.getElementById("messageInput").value = "";
+
+            const chatBox = document.getElementById('chat_box');
+
+            let pElement = document.createElement("p");
+            pElement.textContent = message;
+            pElement.style.color = "white";
+            pElement.style.font = "20px Arial";
+
+            const width = getTextWidth(message);
+
+            let container = document.createElement("div");
+            container.appendChild(pElement);
+            container.style.boxShadow = "0px 0px 7px gray";
+            container.style.display = "flex";
+            container.style.alignItems = "center";
+            container.style.width = `${width}px`;
+            container.style.maxWidth = "60%";
+            container.style.height = "auto";
+            container.style.wordWrap = "break-all";
+            container.style.backgroundColor = "#3fcaca";
+            container.style.paddingLeft = "10px";
+            container.style.paddingRight = "10px";
+            container.style.alignSelf = "flex-start";
+            container.style.marginLeft = "2.5%";
+
+            let chat_box = document.getElementById("chat_box");
+            chat_box.appendChild(container);
+            
+            chat_box.scrollTop = chat_box.scrollHeight;
+
+            const fullMessage = {
+                text: message,
+                url: window.location.href
+            };
+            channel.postMessage(fullMessage);
+        }
+
+        function sendMessage_live_channel(message) {
+            const fullMessage = {
+                text: message,
+                url: window.location.href
+            };
+            live.postMessage(fullMessage);
+        }
+
+        channel.onmessage = function(event) {
+            const messageData = event.data;
+            if (messageData.url.endsWith("student.html")){
+                const chatBox = document.getElementById('chat_box');
+
+                let pElement = document.createElement("p");
+                pElement.textContent = messageData.text;
+                pElement.style.color = "#6082B6";
+                pElement.style.font = "20px Arial";
+
+                const width = getTextWidth(messageData.text);
+
+                let container = document.createElement("div");
+                container.appendChild(pElement);
+                container.style.boxShadow = "0px 0px 7px gray";
+                container.style.display = "flex";
+                container.style.alignItems = "center";
+                container.style.width = `${width}px`;
+                container.style.maxWidth = "60%";
+                container.style.height = "auto";
+                container.style.wordWrap = "break-all";
+                container.style.backgroundColor = "gainsboro";
+                container.style.paddingLeft = "10px";
+                container.style.paddingRight = "10px";
+                container.style.alignSelf = "flex-end";
+                container.style.marginRight = "2.5%";
+
+                let chat_box = document.getElementById("chat_box");
+                chat_box.appendChild(container);
+                
+                chat_box.scrollTop = chat_box.scrollHeight;
+            }
+        };
+
+        live.onmessage = function(event) {
+            const messageData = event.data;
+            if (messageData.url.endsWith("student.html")){
+                if (document.getElementById('live').textContent != messageData.text) {
+                    document.getElementById('live').textContent = messageData.text;
+                    sendMessage_live_channel(message="online")
+                }
+            }
+        };
+
+        window.addEventListener('load', function () {
+            sendMessage_live_channel(message="online")
+        });
+
+        window.addEventListener('beforeunload', function () {
+            sendMessage_live_channel(message="offline")
+        });
+
+    </script>
+
+    <!-- <script>
+        const channel = new BroadcastChannel('message_channel');
+        const live = new BroadcastChannel('live_channel');
+
+        function sendMessageThroughMessageChannel(message=null) {
+            if (message == null) {
+                message = document.getElementById('messageInput').value;
+                const fullMessage = {
+                    text: message,
+                    url: window.location.href // Include the sender URL in the message
+                };
+                channel.postMessage(fullMessage);
+            } else {
+                const fullMessage = {
+                    text: message,
+                    url: window.location.href // Include the sender URL in the message
+                };
+                channel.postMessage(fullMessage);
+            }
+        }
+
+        function sendMessageThroughLiveChannel(message) {
+            const fullMessage = {
+                text: message,
+                url: window.location.href // Include the sender URL in the message
+            };
+            live.postMessage(fullMessage);
+        }
+
+        channel.onmessage = function(event) {
+            const messageData = event.data;
+            if (messageData.url.endsWith("student.html")){
+                document.getElementById('receivedMessage').textContent = messageData.text;
+            }
+        };
+
+        live.onmessage = function(event) {
+            const messageData = event.data;
+            if (messageData.url.endsWith("student.html")){
+                if (document.getElementById('live').textContent != messageData.text) {
+                    console.log(messageData);
+                    document.getElementById('live').textContent = messageData.text;
+                    sendMessageThroughLiveChannel(message="online")
+                }
+            }
+        };
+
+        window.addEventListener('load', function () {
+            sendMessageThroughLiveChannel(message="online")
+        });
+        // sendMessageThroughLiveChannel("online")
+
+        window.addEventListener('beforeunload', function () {
+            sendMessageThroughLiveChannel(message="offline")
+        });
+
+    </script> -->
+</body>
+</html>
